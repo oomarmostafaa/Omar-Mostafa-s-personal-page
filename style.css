@@ -344,18 +344,43 @@ nav {
     box-shadow: 0 20px 40px rgba(138, 43, 226, 0.4);
 }
 
+/* التنسيق الأساسي */
 .btn-secondary {
     background: rgba(255, 255, 255, 0.05);
     color: #FF6B35;
     border: 2px solid rgba(255, 107, 53, 0.3);
     backdrop-filter: blur(10px);
+    padding: 10px 15px;
+    font-size: 14px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
+/* عند التمرير */
 .btn-secondary:hover {
     background: rgba(255, 107, 53, 0.1);
     border-color: #FF6B35;
     transform: translateY(-3px) scale(1.05);
     box-shadow: 0 15px 30px rgba(255, 107, 53, 0.2);
+}
+
+/* تنسيق لمقاسات الشاشات الصغيرة (مثل الموبايل) */
+@media (max-width: 768px) {
+    .btn-secondary {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        padding: 12px;
+        margin: 8px 0;
+    }
+    .nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 .social-icons {
